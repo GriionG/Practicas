@@ -22,9 +22,23 @@ El modelo es responsable de
 ![Imagen MVC](https://si.ua.es/es/documentacion/asp-net-mvc-3/imagenes/introduccion/flujo-mvc.png)
 
 ### Definir la infraestructura para el almacenamiento y recuperación de datos
-MVC era inicialmente un patrón arquitectural, un modelo o guía que expresa cómo organizar y estructurar los componentes de un sistema software, sus responsabilidades y las relaciones existentes entre cada uno de ellos.
-Su nombre, MVC, parte de las iniciales de Modelo-Vista-Controlador (Model-View-Controller, en inglés), que son las capas o grupos de componentes en los que organizaremos nuestras aplicaciones bajo este paradigma.
-Es a menudo considerado también un patrón de diseño de la capa de presentación, pues define la forma en que se organizan los componentes de presentación en sistemas distribuidos.
+~~~
+public ActionResult Index()
+        {
+            ViewBag.idcombo = new SelectList(db.TblCatalogoCombos, "IdCombo", "Nombre");
+
+            ViewBag.idpizza = new SelectList(db.TblCatalogoCombos, "Idpizza", "NombrePizza");
+            return View();
+        }
+
+
+Asi recibo los datos en la vista
+
+
+    @Html.DropDownList("idcombo ", string.Empty)
+
+    @Html.DropDownList("idpizza ", string.Empty)
+~~~~
 
 ![mvc2](https://www.imds.org.mx/blog/wp-content/uploads/2020/03/patron-mvc-diagrama.png)
 
