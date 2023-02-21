@@ -16,28 +16,8 @@ El Modelo que contiene una representación de los datos que maneja el sistema, s
 ![Imagen MVC](https://si.ua.es/es/documentacion/asp-net-mvc-3/imagenes/introduccion/flujo-mvc.png)
 
 ### Definir la infraestructura para el almacenamiento y recuperación de datos
-~~~
-public ActionResult Index()
-        {
-            ViewBag.idcombo = new SelectList(db.TblCatalogoCombos, "IdCombo", "Nombre");
 
-            ViewBag.idpizza = new SelectList(db.TblCatalogoCombos, "Idpizza", "NombrePizza");
-            return View();
-        }
-
-
-Asi recibo los datos en la vista
-
-
-    @Html.DropDownList("idcombo ", string.Empty)
-
-    @Html.DropDownList("idpizza ", string.Empty)
-~~~~
- 
- 
-![mvc2](https://www.imds.org.mx/blog/wp-content/uploads/2020/03/patron-mvc-diagrama.png)
-
-## Ejemplos de codgios MVC
+##### Ejemplos de codgios MVC
 
 >Modelo
 ~~~
@@ -116,6 +96,7 @@ class Prod extends BD_PDO
  
 ?> 
 ~~~
+![mvc2](https://www.imds.org.mx/blog/wp-content/uploads/2020/03/patron-mvc-diagrama.png)
 
 Fuentes de Informacion 
 ----------------------
