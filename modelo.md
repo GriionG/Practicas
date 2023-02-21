@@ -39,7 +39,8 @@ Asi recibo los datos en la vista
 
     @Html.DropDownList("idpizza ", string.Empty)
 ~~~~
-
+ 
+ 
 ![mvc2](https://www.imds.org.mx/blog/wp-content/uploads/2020/03/patron-mvc-diagrama.png)
 
 ## Ejemplos de codgios MVC
